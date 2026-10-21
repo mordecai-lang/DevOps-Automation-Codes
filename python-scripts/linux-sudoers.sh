@@ -11,7 +11,7 @@ sudo chown root:root /usr/local/sbin/deploy-myapp
 sudo chmod 750 /usr/local/sbin/deploy-myapp
 
 #set directory ownership with restricted others privileges to be implemented
-sudo chown root:root /usr/local/sbin
+sudo chown root:root ~/usr/local/sbin
 sudo chmod 755 /usr/local/sbin
 
 #add deploy user to sudoers restricting parsing argument
@@ -35,4 +35,5 @@ sudo install -o root -g root -m 0440 "$TEMP_FILE" "$SUDOERS_FILE"
 #Validate
 sudo visudo -c
 
-echo "Deployment script permissions and sudoers rule configured."
+echo "[INFO] Deployment script permissions and sudoers rule configured."
+
